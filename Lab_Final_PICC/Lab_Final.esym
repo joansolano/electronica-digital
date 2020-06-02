@@ -1,8 +1,7 @@
-F N "MAIN" 0 13 ""
 D G "__PCM__" 0 108 ""5.076""
 D G "__DEVICE__" 0 108 "887"
-D G "__DATE__" 0 108 ""01-jun.-20""
-D G "__TIME__" 0 108 ""20:48:25""
+D G "__DATE__" 0 108 ""02-jun.-20""
+D G "__TIME__" 0 108 ""00:54:57""
 D G "_UNICODE" 0 108 ""?""
 D G "__EVAL" 0 108 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
@@ -1231,213 +1230,30 @@ V L "on" 2 443 "int8" `681
 F G "lcd_cursor_on" 2 444 "void(int8 on)" `680 
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
-D G "MATH_H" 3 30 ""
-D G "PI" 3 35 "3.1415926535897932"
-D G "SQRT2" 3 38 "1.4142135623730950"
-C L "CEIL_FLOOR" 3 2 3 "FUNCTION"
-F N "CEIL_FLOOR" 3 45 ""
-V L "x" 3 45 "float" `683 
-V L "n" 3 45 "int8" `684 
-F G "CEIL_FLOOR" 3 46 "float(float x,int8 n)" `682 
-V L "y" 3 47 "float" `685 
-V L "res" 3 47 "float" `686 
-V L "l" 3 48 "int16" `687 
-V L "s" 3 49 "int1" `688 
-C L "floor" 3 2 5 "FUNCTION"
-F N "floor" 3 207 ""
-V L "x" 3 207 "float" `703 
-F G "floor" 3 208 "float(float x)" `702 
-C L "ceil" 3 2 5 "FUNCTION"
-F N "ceil" 3 233 ""
-V L "x" 3 233 "float" `705 
-F G "ceil" 3 234 "float(float x)" `704 
-D G "fabs" 3 259 "abs"
-C L "fmod" 3 2 6 "FUNCTION"
-F N "fmod" 3 271 ""
-V L "x" 3 271 "float" `707 
-V L "y" 3 271 "float" `708 
-F G "fmod" 3 272 "float(float x,float y)" `706 
-V L "i" 3 273 "float" `709 
-D G "LN2" 3 334 "0.6931471805599453"
-D G "LN2_INV" 3 335 "1.4426950408889634073"
-V G "pe" 3 337 "[6]" `714 
-F N "exp" 3 341 ""
-V L "x" 3 341 "float" `717 
-F G "exp" 3 342 "float(float x)" `716 
-V L "y" 3 343 "float" `718 
-V L "res" 3 343 "float" `719 
-V L "r" 3 343 "float" `720 
-V L "n" 3 347 "sint8" `721 
-V L "s" 3 348 "int1" `722 
-C L "exp" 3 2 1 "FUNCTION"
-V G "pl" 3 525 "[4]" `726 
-V G "ql" 3 526 "[4]" `729 
-C L "log" 3 2 3 "FUNCTION"
-F N "log" 3 534 ""
-V L "x" 3 534 "float" `732 
-F G "log" 3 535 "float(float x)" `731 
-V L "y" 3 536 "float" `733 
-V L "res" 3 536 "float" `734 
-V L "r" 3 536 "float" `735 
-V L "y2" 3 536 "float" `736 
-V L "n" 3 540 "sint8" `737 
-C L "log" 3 2 1 "FUNCTION"
-D G "LN10" 3 758 "2.3025850929940456"
-D G "LN10_INV" 3 759 "0.4342944819032518276"
-C L "log10" 3 2 3 "FUNCTION"
-F N "log10" 3 767 ""
-V L "x" 3 767 "float" `739 
-F G "log10" 3 768 "float(float x)" `738 
-V L "r" 3 769 "float" `740 
-C L "modf" 3 2 8 "FUNCTION"
-F N "modf" 3 808 ""
-V L "value" 3 808 "float" `742 
-V L "iptr" 3 808 "*float" `743 
-F G "modf" 3 809 "float(float value,*float iptr)" `741 
-C L "pwr" 3 2 6 "FUNCTION"
-F N "pwr" 3 836 ""
-V L "x" 3 836 "float" `745 
-V L "y" 3 836 "float" `746 
-F G "pwr" 3 837 "float(float x,float y)" `744 
-C L "pow" 3 2 7 "FUNCTION"
-F N "pow" 3 899 ""
-V L "x" 3 899 "float" `748 
-V L "y" 3 899 "float" `749 
-F G "pow" 3 900 "float(float x,float y)" `747 
-C L "sqrt" 3 2 5 "FUNCTION"
-F N "sqrt" 3 960 ""
-V L "x" 3 960 "float" `751 
-F G "sqrt" 3 961 "float(float x)" `750 
-V L "y" 3 962 "float" `752 
-V L "res" 3 962 "float" `753 
-V L "p" 3 966 "*int8" `754 
-D G "PI_DIV_BY_TWO_INV" 3 1155 "0.63661977236758134"
-D G "PI_DIV_BY_TWO" 3 1159 "1.5707963267948966"
-D G "TWOBYPI" 3 1163 "0.6366197723675813"
-C L "cos" 3 2 3 "FUNCTION"
-F N "cos" 3 1171 ""
-V L "x" 3 1171 "float" `756 
-F G "cos" 3 1172 "float(float x)" `755 
-V L "y" 3 1173 "float" `757 
-V L "t" 3 1173 "float" `758 
-V L "t2" 3 1173 "float" `759 
-V L "quad" 3 1174 "int8" `760 
-V L "i" 3 1174 "int8" `761 
-V L "frac" 3 1175 "float" `762 
-V L "p" 3 1176 "float[5]" `763  "by the series definition for cosine"
-C L "cos" 3 2 1 "FUNCTION"
-C L "cos" 3 2 2 "FUNCTION"
-C L "cos" 3 2 1 "FUNCTION"
-C L "cos" 3 2 1 "FUNCTION"
-C L "cos" 3 2 1 "FUNCTION"
-C L "cos" 3 2 1 "FUNCTION"
-C L "cos" 3 2 1 "FUNCTION"
-C L "cos" 3 2 1 "FUNCTION"
-C L "sin" 3 2 5 "FUNCTION"
-F N "sin" 3 1310 ""
-V L "x" 3 1310 "float" `765 
-F G "sin" 3 1311 "float(float x)" `764 
-C L "tan" 3 2 5 "FUNCTION"
-F N "tan" 3 1336 ""
-V L "x" 3 1336 "float" `767 
-F G "tan" 3 1337 "float(float x)" `766 
-V L "c" 3 1338 "float" `768 
-V L "s" 3 1338 "float" `769 
-V G "pas" 3 1376 "[3]" `771 
-V G "qas" 3 1377 "[3]" `774 
-F N "ASIN_COS" 3 1379 ""
-V L "x" 3 1379 "float" `777 
-V L "n" 3 1379 "int8" `778 
-F G "ASIN_COS" 3 1380 "float(float x,int8 n)" `776 
-V L "y" 3 1381 "float" `779 
-V L "res" 3 1381 "float" `780 
-V L "r" 3 1381 "float" `781 
-V L "y2" 3 1381 "float" `782 
-V L "s" 3 1382 "int1" `783 
-C L "ASIN_COS" 3 2 1 "FUNCTION"
-C L "ASIN_COS" 3 2 1 "FUNCTION"
-C L "asin" 3 2 5 "FUNCTION"
-F N "asin" 3 1537 ""
-V L "x" 3 1537 "float" `785 
-F G "asin" 3 1538 "float(float x)" `784 
-V L "r" 3 1539 "float" `786 
-C L "acos" 3 2 5 "FUNCTION"
-F N "acos" 3 1571 ""
-V L "x" 3 1571 "float" `788 
-F G "acos" 3 1572 "float(float x)" `787 
-V L "r" 3 1573 "float" `789 
-V G "pat" 3 1599 "[4]" `791 
-V G "qat" 3 1600 "[4]" `794 
-C L "atan" 3 2 3 "FUNCTION"
-F N "atan" 3 1608 ""
-V L "x" 3 1608 "float" `797 
-F G "atan" 3 1609 "float(float x)" `796 
-V L "y" 3 1610 "float" `798 
-V L "res" 3 1610 "float" `799 
-V L "r" 3 1610 "float" `800 
-V L "s" 3 1611 "int1" `801 
-V L "flag" 3 1611 "int1" `802 
-C L "atan" 3 2 1 "FUNCTION"
-C L "atan2" 3 2 7 "FUNCTION"
-F N "atan2" 3 1751 ""
-V L "y" 3 1751 "float" `804 
-V L "x" 3 1751 "float" `805 
-F G "atan2" 3 1752 "float(float y,float x)" `803 
-V L "z" 3 1753 "float" `806 
-V L "sign" 3 1754 "int1" `807 
-V L "quad" 3 1755 "int8" `808 
-C L "atan2" 3 2 1 "FUNCTION"
-C L "atan2" 3 2 1 "FUNCTION"
-C L "cosh" 3 2 7 "FUNCTION"
-F N "cosh" 3 1973 ""
-V L "x" 3 1973 "float" `811 
-F G "cosh" 3 1974 "float(float x)" `810 
-C L "sinh" 3 2 6 "FUNCTION"
-F N "sinh" 3 2000 ""
-V L "x" 3 2000 "float" `813 
-F G "sinh" 3 2001 "float(float x)" `812 
-C L "tanh" 3 2 6 "FUNCTION"
-F N "tanh" 3 2030 ""
-V L "x" 3 2030 "float" `815 
-F G "tanh" 3 2031 "float(float x)" `814 
-D G "LOG2" 3 2060 ".30102999566398119521"
-D G "LOG2_INV" 3 2061 "3.32192809488736234787"
-F N "frexp" 3 2062 ""
-V L "x" 3 2062 "float" `817 
-V L "exp" 3 2062 "*sint8" `818 
-F G "frexp" 3 2063 "float(float x,*sint8 exp)" `816 
-V L "res" 3 2064 "float" `819 
-V L "sign" 3 2065 "int1" `820 
-C L "ldexp" 3 2 6 "FUNCTION"
-F N "ldexp" 3 2207 ""
-V L "value" 3 2207 "float" `822 
-V L "exp" 3 2207 "sint8" `823 
-F G "ldexp" 3 2208 "float(float value,sint8 exp)" `821 
-C L "MAIN" 3 2 2 "FUNCTION"
-F N "MAIN" 0 13 ""
-F G "MAIN" 0 13 "void()" `824  "Variables"
-C L "MAIN" 0 15 1 "FUNCTION"
-V L "tempc" 0 16 "float" `825 
-V L "q_tempc" 0 17 "int16" `826 
-C L "MAIN" 0 15 1 "FUNCTION"
-V L "tempm" 0 19 "float" `827 
-V L "q_tempm" 0 20 "int16" `828 
-V L "bits25" 0 21 "int16" `829 
-C L "MAIN" 0 15 2 "FUNCTION"
-V L "max_q_ni" 0 23 "int16" `830 
-V L "q_ni" 0 24 "int16" `831 
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 2 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 2 "FUNCTION"
+F N "MAIN" 0 12 ""
+F G "MAIN" 0 12 "void(float x,int8 n)" `682  "Variables"
+C L "MAIN" 0 14 1 "FUNCTION"
+V L "tempc" 0 15 "float" `683 
+V L "q_tempc" 0 16 "int16" `684 
+C L "MAIN" 0 14 1 "FUNCTION"
+V L "tempm" 0 18 "float" `685 
+V L "q_tempm" 0 19 "int16" `686 
+V L "bits25" 0 20 "int16" `687 
+C L "MAIN" 0 14 2 "FUNCTION"
+V L "max_q_ni" 0 22 "int16" `688 
+V L "q_ni" 0 23 "int16" `689 
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 2 "FUNCTION"
+C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 14 2 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

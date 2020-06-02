@@ -1,47 +1,42 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 008     lcd
 008     lcdlat
 015     CCP_1
 015     CCP_1_LOW
 016     CCP_1_HIGH
-01B     CCP_2
 01B     CCP_2_LOW
+01B     CCP_2
 01C     CCP_2_HIGH
 020-021 @sprintf_string
-022-025 atan2.y
 022-025 MAIN.tempc
-026-029 atan2.x
 026-027 MAIN.q_tempc
 028-02B MAIN.tempm
-02A-02D atan2.z
 02C-02D MAIN.q_tempm
 02E-02F MAIN.bits25
-02E.0   atan2.sign
-02F     atan2.quad
 030-031 MAIN.max_q_ni
 032-033 MAIN.q_ni
 034     @PSTRINGCN7_670.P1
-034-037 @PRINTF_L32D_670FPFPF.P2
 034     lcd_init.i
-034-035 @MUL1616.P1
-034-037 @ADDFF.P2
+034-037 @ADDFF.P1
+034-035 @MUL1616.P2
+034-037 @PRINTF_L32D_670FPFPF.P3
 034     MAIN.@SCRATCH1
 034     @PSTRINGC7_670.@SCRATCH1
 035-038 lcd_init.LCD_INIT_STRING
 035     MAIN.@SCRATCH2
 035     @PSTRINGC7_670.@SCRATCH2
 035     @PSTRINGCN7_670.@SCRATCH1
-036-037 @MUL1616.P1
-036-037 @DIV1616.P2
+036-037 @DIV1616.P1
+036-037 @MUL1616.P2
 036     MAIN.@SCRATCH3
 036     @PSTRINGC7_670.@SCRATCH3
 036     @PSTRINGCN7_670.@SCRATCH2
 037     MAIN.@SCRATCH4
 037     @PSTRINGC7_670.@SCRATCH4
 037     @PSTRINGCN7_670.@SCRATCH3
-038-03B @ADDFF.P1
-038     @PRINTF_L32D_670FPFPF.P2
+038     @PRINTF_L32D_670FPFPF.P1
+038-03B @ADDFF.P2
 038-039 @DIV1616.P3
 038     MAIN.@SCRATCH5
 038     @MUL1616.@SCRATCH1
@@ -56,40 +51,40 @@
 03B     @PRINTF_L32D_670FPFPF.@SCRATCH3
 03C-03F @FLT.P1
 03C-03D @ITOF.P2
-03C     @ADDFF.@SCRATCH1
 03C     @PRINTF_L32D_670FPFPF.@SCRATCH4
-03D     @ADDFF.@SCRATCH2
+03C     @ADDFF.@SCRATCH1
 03D     @PRINTF_L32D_670FPFPF.@SCRATCH5
-03E     @ADDFF.@SCRATCH3
+03D     @ADDFF.@SCRATCH2
 03E     @PRINTF_L32D_670FPFPF.@SCRATCH6
-03F     @ADDFF.@SCRATCH4
+03E     @ADDFF.@SCRATCH3
 03F     @PRINTF_L32D_670FPFPF.@SCRATCH7
+03F     @ADDFF.@SCRATCH4
 040-043 @FLT.P1
-040     @ADDFF.@SCRATCH5
 040     @PRINTF_L32D_670FPFPF.@SCRATCH8
+040     @ADDFF.@SCRATCH5
 041-044 @FTOSD.P1
-041-044 @DIV3232.P2
-041-044 @MULFF.P3
 041     lcd_putc.c
+041-044 @DIV3232.P1
+041-044 @MULFF.P2
 041     @ADDFF.@SCRATCH6
-042     @delay_ms1.P1
 042     lcd_gotoxy.x
+042     @delay_ms1.P1
 042     @ADDFF.@SCRATCH7
 043     lcd_gotoxy.y
 043     @ADDFF.@SCRATCH8
 044     lcd_gotoxy.address
 044     @FLT.@SCRATCH1
-045-048 @DIV3232.P1
-045-048 @MULFF.P2
+045-048 @MULFF.P1
+045-048 @DIV3232.P2
 045     lcd_gotoxy.@SCRATCH1
-045     @FLT.@SCRATCH2
 045     @FTOSD.@SCRATCH1
+045     @FLT.@SCRATCH2
 046     lcd_send_byte.address
 047     lcd_send_byte.n
 048     lcd_read_byte.low
 048     lcd_send_byte.@SCRATCH1
-049     lcd_read_byte.high
 049     lcd_send_nibble.n
+049     lcd_read_byte.high
 049     @MULFF.@SCRATCH1
 049     @DIV3232.@SCRATCH1
 04A     lcd_read_byte.@SCRATCH1
@@ -109,13 +104,13 @@
 088     lcdtris
 107.6   C1OUT
 108.6   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-000004  @const834.call
-00000C  @const845.call
-000014  @const856.call
+000004  @const692.call
+00000C  @const708.call
+000014  @const719.call
 00001C  @delay_ms1
 000031  lcd_send_nibble
 00003D  lcd_read_nibble
@@ -135,23 +130,22 @@ ROM Allocation:
 0002F4  @FTOSD
 0003AD  @ADDFF
 0004EE  @FLT
-00052D  MAIN
+000800  MAIN
 000800  @cinit1
 000814  @cinit2
 
 Project Directory:
-    D:\1JOAN\Universidad\Electrónica Digital\Laboratorio_Final\Lab_Final_PICC\
+    D:\1JOAN\Universidad\Electronica_Digital\Laboratorio_Final\Lab_Final_PICC\
 
 Project Files:
-    Lab_Final.c                                             [01-jun.-20 20:48  CRC=CAE27807]
+    Lab_Final.c                                             [02-jun.-20 00:54  CRC=367CBF26]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-ene.-18 15:53  CRC=9C71CB72]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c   [22-feb.-16 09:05  CRC=D1A6378A]
-    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\math.h  [22-sept.-16 08:36  CRC=9CF8C837]
 
-Source signature=72EC0B71
+Source signature=763AF9AC
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=A214
+Hex file CRC=0307
 
 Units:
     Lab_Final (main)

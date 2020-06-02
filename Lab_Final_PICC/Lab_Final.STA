@@ -2,8 +2,8 @@
 ROM used:   2668/8192 (33%)
             3391/8192 (41%) including unused fragments
 
-            0.7 Average locations per line
-            6.5 Average locations per statement
+            2.0 Average locations per line
+            17.7 Average locations per statement
 
 RAM used:   33/368 (9%) at main() level
             51/368 (14%) worst case
@@ -13,12 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  107    67  16  Lab_Final.c
+  106    67  44  Lab_Final.c
   786     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h
-  456    84  21  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c
- 2227   258  63  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
+  456    84  56  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c
 ----- -----
- 3576   409 Total
+ 1348   151 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -30,34 +29,34 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     62   2    6    814  7.2  lcd_init
 0     18   1    4    208  6.3  lcd_gotoxy
 0     44   2    1    354  4.7  lcd_putc
-0     63   2   10             @FLT
+1   1343  50   26   3073  8.6  MAIN
+0      8   0    0             @const692
+0     88   3    4             @PSTRINGC7_670
 0     29   1    2             @ITOF
 0    117   4   13             @MULFF
-0    321  12   16             @ADDFF
-1   1343  50   26   3073  8.6  MAIN
-0      8   0    0             @const834
-0     88   3    4             @PSTRINGC7_670
-0     23   1    5             @MUL1616
-0     39   1    5             @DIV1616
-0      8   0    0             @const845
+0     23   1    5     43  2.1  @MUL1616
+0     39   1    5     44  1.9  @DIV1616
+0      8   0    0    259  6.9  @const708
 0     87   3    5             @PSTRINGCN7_670
  Inline         5             @FTOSD
-0     79   3   13             @DIV3232
+0     79   3   13   1071  8.0  @DIV3232
 0    224   8   13             @PRINTF_L32D_670FPFPF
-0      8   0    0             @const856
- Inline         0             @cinit1
+0      8   0    0             @const719
+0    321  12   16             @ADDFF
+0     63   2   10    979 10.0  @FLT
+ Inline         0    102  2.8  @cinit1
 
 Program metrics:
-    Functions               8
-    Statements              409
-    Comments                511
-    Volume (V)              7943
-    Difficulty (D)          41.4
-    Effort to implement (E) 329024
-    Time to implement (T)   5 hours, 5 minutes
-    Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   19
-    Maintainability (MI)    62
+    Functions               14
+    Statements              151
+    Comments                254
+    Volume (V)              12438
+    Difficulty (D)          75.1
+    Effort to implement (E) 934398
+    Time to implement (T)   14 hours, 25 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   24
+    Maintainability (MI)    112
 
  Segment     Used  Free
 -----------  ----  ----

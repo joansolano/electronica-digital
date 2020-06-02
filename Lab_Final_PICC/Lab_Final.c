@@ -3,7 +3,6 @@
 #use delay(clock=4000000)
 #fuses XT, NOWDT, NOPROTECT
 #include <LCD.c>
-#include <math.h>
 
 #use fast_io(A)
 #use fast_io(B)
@@ -18,7 +17,7 @@ void main() {
    //Temperatura medida
    float tempm = 0;
    int16 q_tempm = 0;
-   int16 bits25 = (0.25*1024)/5;   //El sensor LM35 entre 0.25V a 25°C
+   int16 bits25 = (0.25*1024)/5;   //El sensor LM35 entrega 0.25V a 25°C
    //Nivel de luminosidad
    int16 max_q_ni = 1023;
    int16 q_ni = 0;
@@ -49,7 +48,7 @@ void main() {
       set_adc_channel(0);
       delay_us(20);
       q_tempc = read_adc();
-      tempc = 0.0976*q_tempc;
+      tempc = 0.097752*q_tempc;
       
       //Lectura de la temperatura medida
       set_adc_channel(1);
