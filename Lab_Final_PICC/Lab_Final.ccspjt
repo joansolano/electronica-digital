@@ -31,15 +31,19 @@ D1_L6=[72767]Started Editing.
 D1_L7=[73546]Stopped Editing.
 D1_L8=[74273]Started Editing.
 D1_L9=[75203]Stopped Editing.
-TotalEdit=95
+TotalEdit=99
 TotalDebug=0
 D1_E=95
 D1_D=0
 D1_L10=[76128]Project Closed.
 D2=02-06-2020
-D2_L=2
+D2_L=4
 D2_L1=[3100]Project Opened.
 D2_L2=[3109]Started Editing.
+D2_L3=[3596]Stopped Editing.
+D2_E=4
+D2_D=0
+D2_L4=[3724]Project Closed.
 
 [fileformats]
 forcecoff=0
