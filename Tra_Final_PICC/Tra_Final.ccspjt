@@ -1,0 +1,28 @@
+[PROJECT]
+Target=Tra_Final.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=Tra_Final.c
+[Tra_Final.c]
+Type=4
+[mru-list]
+1=Tra_Final.c
+[Units]
+Count=1
+1=Tra_Final (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=02-06-2020
+D1_L=2
+D1_L1=[4095]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L2=[4095]Project Closed.

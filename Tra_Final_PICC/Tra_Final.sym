@@ -1,0 +1,62 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     lcdlat
+008     lcd
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MAIN
+000004  @cinit1
+000016  @cinit2
+
+Project Directory:
+    D:\1JOAN\Universidad\Electronica_Digital\Electronica_Digital\Tra_Final_PICC\
+
+Project Files:
+    Tra_Final.c                                             [02-jun.-20 01:07  CRC=D872A938]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-ene.-18 15:53  CRC=9C71CB72]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c   [22-feb.-16 09:05  CRC=D1A6378A]
+
+Source signature=1830E3BE
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=EAF5
+
+Units:
+    Tra_Final (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Tra_Final.xsym
+    Errors:      Tra_Final.err
+    Ext Symbols: Tra_Final.esym
+    INHX8:       Tra_Final.hex
+    Symbols:     Tra_Final.sym
+    List:        Tra_Final.lst
+    Debug/COFF:  Tra_Final.cof
+    Project:     Tra_Final.ccspjt
+    Call Tree:   Tra_Final.tre
+    Statistics:  Tra_Final.STA
