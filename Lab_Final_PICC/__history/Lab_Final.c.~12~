@@ -1,0 +1,51 @@
+#include <16f887.h>
+#device ADC = 10
+#use delay(clock=4000000)
+#fuses XT, NOWDT, NOPROTECT
+#include <LCD.c>
+
+#use fast_io(A)
+#use fast_io(C)
+#use fast_io(D)
+
+void main() {
+   //Variables
+   //Temperatura de control (0-100 °C)
+   int16 tempc = 0;
+   int16 q_tempc = 0;
+   //Temperatura medida
+   float tempm = 0;
+   int16 q_tempm = 0;
+   int16 bits25 = (0.25*1024)/5;   //El sensor LM35 entre 0.25V a 25°C
+   //Nivel de luminosidad
+   int16 max_q_ni = 1023;
+   int16 q_ni = 0;
+   
+   //Configuración ADC
+   setup_adc_ports(0x07);           //Utiliza los canales AN0, AN1 y AN2
+   setup_adc(ADC_CLOCK_INTERNAL);
+   
+   //Inicio LCD
+   lcd_init();
+   delay_ms(300);
+   printf(lcd_putc, "\fBienvenido!!!");
+   
+   while (true) {
+      //Ajuste de la temperatura de control
+      set_adc_channel(0);
+      delay_us(20);
+      q_tempc = read_adc();
+      tempc = 0.0976*q_tempc;
+      
+      //Ajuste de la temperatura medida
+      set_adc_channel(1);
+      delay_us(20);
+      q_tempm = read_adc();
+      tempm = (25*q_tempm)/bits25;
+      
+      //Visualización de las dos temperaturas
+      printf(lcd_putc, "\fT.C = %d oC", tempc);
+      printf(lcd_putc, "\nT. = %03.2f oC", tempm);
+   }
+   
+}

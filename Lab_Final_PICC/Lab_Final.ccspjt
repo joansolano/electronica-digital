@@ -1,0 +1,41 @@
+[PROJECT]
+Target=Lab_Final.hex
+Processor_Text=PIC16F887
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=Lab_Final.c
+[Lab_Final.c]
+Type=4
+[mru-list]
+1=Lab_Final.c
+
+[defines]
+buildcount=15
+
+[Opened Files]
+1=Lab_Final.c
+t1=33
+Count=1
+
+[ProjectLog]
+Days=1
+D1=01-06-2020
+D1_L=10
+D1_L1=[69467]Stopped Editing.
+D1_L2=[69559]Started Editing.
+D1_L3=[71649]Stopped Editing.
+D1_L4=[71694]Started Editing.
+D1_L5=[72025]Stopped Editing.
+D1_L6=[72767]Started Editing.
+D1_L7=[73546]Stopped Editing.
+D1_L8=[74273]Started Editing.
+D1_L9=[75203]Stopped Editing.
+TotalEdit=95
+TotalDebug=0
+D1_E=95
+D1_D=0
+D1_L10=[76128]Project Closed.
+[Units]
+Count=1
+1=Lab_Final (main)

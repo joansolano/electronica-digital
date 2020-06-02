@@ -1,0 +1,19 @@
+#include <16f887.h>
+#use delay(clock=4000000)
+#fuses XT, NOWDT, NOPROTECT
+#include <LCD.c>
+
+#use fast_io(A)
+#use fast_io(C)
+#use fast_io(D)
+
+void main(){
+   
+   //Configuración ADC
+   setup_adc_ports(sAN0, sAN1, sAN2);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   
+   //Inicio LCD
+   lcd_init();
+   delay_ms(300);
+}
