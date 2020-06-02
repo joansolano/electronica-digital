@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.076, 56587               02-jun.-20 01:07
+CCS PCM C Compiler, Version 5.076, 56587               02-jun.-20 10:00
 
                Filename:   D:\1JOAN\Universidad\Electronica_Digital\Electronica_Digital\Tra_Final_PICC\Tra_Final.lst
 
@@ -490,6 +490,10 @@ CCS PCM C Compiler, Version 5.076, 56587               02-jun.-20 01:07
 .................... #endif 
 ....................  
 ....................  
+.................... #use fast_io(A) 
+.................... #use fast_io(B) 
+.................... #use fast_io(D) 
+....................  
 .................... void main () { 
 0004:  MOVF   03,W
 0005:  ANDLW  1F
@@ -510,7 +514,7 @@ CCS PCM C Compiler, Version 5.076, 56587               02-jun.-20 01:07
 0014:  CLRF   08
 0015:  CLRF   09
 0016:  BCF    03.7
-....................     
+....................    //Variables 
 .................... } 
 0017:  SLEEP
 

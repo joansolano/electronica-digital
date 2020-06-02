@@ -14,10 +14,6 @@ void main () {
    //Frecuencia respiratoria (10-70) Respiraciones por minuto
    int16 frec_res = 0;
    int16 q_frec_res = 0;
-   //Presion medida
-   float pres_med = 0;
-   int16 q_pres_med = 0;
-   int16 bits100 = (4.092*1024)/5;        //El sensor MPX4115 entrega 4.092V a 100kPa
    
    //Puertos Motor Paso a Paso
    set_tris_b(0xF0);             //Se usan los puertos de RB0 hasta RB3
@@ -25,17 +21,5 @@ void main () {
    //Switches de Start y Stop
    set_tris_c(0xF6);             //Se usan los puertos RC0 y RC3
    
-   //Configuración ADC
-   setup_adc_ports(0x03);        //Se usan los canales AN0 y AN1
-   setup_adc(ADC_CLOCK_INTERNAL);
    
-   //Configuración LCD
-   lcd_init();
-   delay_ms(300);
-   printf(lcd_putc, "\fBienvenido!!!");
-   delay_ms(300);
-   
-   while (true) {
-      //Lectura 
-   }
 }

@@ -9,20 +9,40 @@ FileList=Tra_Final.c
 Type=4
 [mru-list]
 1=Tra_Final.c
-[Units]
-Count=1
-1=Tra_Final (main)
 
 [defines]
-buildcount=1
+buildcount=2
 
 [ProjectLog]
 Days=1
 D1=02-06-2020
-D1_L=2
+D1_L=12
 D1_L1=[4095]Stopped Editing.
 TotalEdit=2
 TotalDebug=0
 D1_E=2
 D1_D=0
 D1_L2=[4095]Project Closed.
+D1_L3=[32633]Project Opened.
+D1_L4=[35045]Started Editing.
+D1_L5=[35368]Stopped Editing.
+D1_L6=[35894]Started Editing.
+D1_L7=[36337]Stopped Editing.
+D1_L8=[40814]Started Editing.
+D1_L9=[41883]Stopped Editing.
+D1_L10=[42198]Started Editing.
+D1_L11=[42694]Stopped Editing.
+D1_L12=[52539]Started Editing.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=Tra_Final.c
+t1=1
+2=..\Lab_Final_PICC\Lab_Final.c
+t2=1
+Count=2
+[Units]
+Count=1
+1=Tra_Final (main)

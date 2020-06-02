@@ -1,10 +1,10 @@
-F N "MAIN" 0 7 ""
-D G "__PCM__" 0 11 ""5.076""
-D G "__DEVICE__" 0 11 "887"
-D G "__DATE__" 0 11 ""02-jun.-20""
-D G "__TIME__" 0 11 ""01:07:49""
-D G "_UNICODE" 0 11 ""?""
-D G "__EVAL" 0 11 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
+F N "MAIN" 0 11 ""
+D G "__PCM__" 0 15 ""5.076""
+D G "__DEVICE__" 0 15 "887"
+D G "__DATE__" 0 15 ""02-jun.-20""
+D G "__TIME__" 0 15 ""10:00:41""
+D G "_UNICODE" 0 15 ""?""
+D G "__EVAL" 0 15 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 39 ""
 v L "value" 1 39 "int8" `55 
@@ -1231,8 +1231,8 @@ V L "on" 2 443 "int8" `681
 F G "lcd_cursor_on" 2 444 "void(int8 on)" `680 
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
-F N "MAIN" 0 7 ""
-F G "MAIN" 0 7 "void()" `682 
+F N "MAIN" 0 11 ""
+F G "MAIN" 0 11 "void()" `682  "Variables"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

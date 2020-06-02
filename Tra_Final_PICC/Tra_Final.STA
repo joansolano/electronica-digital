@@ -13,11 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   10     0   0  Tra_Final.c
+   14     0   0  Tra_Final.c
   786     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h
   456    84 100  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c
 ----- -----
- 1252    84 Total
+ 1256    84 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -27,7 +27,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 Program metrics:
     Functions               1
     Statements              84
-    Comments                235
+    Comments                236
     Volume (V)              4
     Difficulty (D)          0.0
     Effort to implement (E) 0
