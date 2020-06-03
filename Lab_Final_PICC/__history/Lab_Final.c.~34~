@@ -67,12 +67,12 @@ void main() {
          set_pwm2_duty(0);
          output_low(PIN_B0);
       } else if (tempm < (tempc-1)) {
-         set_pwm2_duty(0);
+         set_pwm4_duty(0);
          output_high(PIN_B0);
       } else if ((tempm > (tempc+1)) && (tempm < (tempc+3))) {
          set_pwm2_duty(512);
          output_low(PIN_B0);
-      } else if ((tempm >= (tempc+3)) && (tempm <= (tempc+5))) {
+      } else if ((tempm >= (tempc+3)) && (tempm >= (tempc+5))) {
          set_pwm2_duty(818);
          output_low(PIN_B0);
       } else if (tempm > (tempc+5)) {
@@ -101,4 +101,5 @@ void main() {
          set_pwm1_duty(0);
       } else {}
    }
+   
 }

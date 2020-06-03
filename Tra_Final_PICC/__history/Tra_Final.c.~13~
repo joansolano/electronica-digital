@@ -1,8 +1,7 @@
 #include <16f887.h>
 #device ADC = 10
-#use delay(clock=32000, crystal)
+#use delay(clock=4000000)
 #fuses XT, NOWDT, NOPROTECT
-#define use_portb_lcd TRUE
 #include <LCD.c>
 
 #use fast_io(A)
@@ -25,7 +24,7 @@ void main () {
    int16 bits100 = 838;        //El sensor MPX4115 entrega 4.092V a 100kPa
    
    //Puertos Motor Paso a Paso
-   set_tris_d(0xF0);             //Se usan los puertos de RB0 hasta RB3
+   set_tris_b(0xF0);             //Se usan los puertos de RB0 hasta RB3
    
    //Switches de Start y Stop
    set_tris_c(0xF6);             //Se usan los puertos RC0 y RC3
@@ -33,10 +32,6 @@ void main () {
    //Configuración ADC
    setup_adc_ports(0x03);        //Se usan los canales AN0 y AN1
    setup_adc(ADC_CLOCK_INTERNAL);
-   
-   //Configuración PWM
-   setup_timer_2(T2_DIV_BY_1, 79, 4);
-   setup_ccp1(CCP_PWM);
    
    //Configuración LCD
    lcd_init();
@@ -73,9 +68,12 @@ void main () {
       
       //Movimiento del motor
       if (start_stop) {
-         set_pwm1_duty();
-      } else {
-         set_pwm1_duty(0);
-      }
+         cont_motor = 0;
+         while (cont_motor < 8) {
+            output_b(motor[cont_motor]);
+            delay_ms(100);
+            cont_motor++;
+         }
+      } else {}
    }
 }

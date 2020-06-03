@@ -36,7 +36,7 @@ void main () {
    
    //Configuración PWM
    setup_timer_2(T2_DIV_BY_1, 79, 4);
-   setup_ccp1(CCP_PWM);
+   setup_cpp1(CPP_PWM);
    
    //Configuración LCD
    lcd_init();
@@ -73,9 +73,12 @@ void main () {
       
       //Movimiento del motor
       if (start_stop) {
-         set_pwm1_duty();
-      } else {
-         set_pwm1_duty(0);
-      }
+         cont_motor = 0;
+         while (cont_motor < 8) {
+            output_d(motor[cont_motor]);
+            delay_ms(100);
+            cont_motor++;
+         }
+      } else {}
    }
 }

@@ -73,9 +73,12 @@ void main () {
       
       //Movimiento del motor
       if (start_stop) {
-         set_pwm1_duty();
-      } else {
-         set_pwm1_duty(0);
-      }
+         cont_motor = 0;
+         while (cont_motor < 8) {
+            output_d(motor[cont_motor]);
+            delay_ms(100);
+            cont_motor++;
+         }
+      } else {}
    }
 }
