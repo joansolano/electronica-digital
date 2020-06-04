@@ -24,9 +24,7 @@ void main () {
    float pres = 0;
    float pres_med = 0;
    float q_pres_med = 0;
-   
-   //Duty cicle
-   int duty_cicle = 0;
+   //float bits100 = 836.9605145;    //El sensor MPX4115 entrega 4.092V a 100kPa
    
    //Puertos Motor Paso a Paso y Start-Stop
    set_tris_b(0xF0);             //Se usan los puertos de RB0 hasta RB3
@@ -48,10 +46,8 @@ void main () {
       set_adc_channel(1);
       delay_us(20);
       q_frec_res = read_adc();
+      //frec_res = 0.06842*q_frec_res;
       frec_res = map(q_frec_res, 0, 1023, 10, 70);
-      
-      //Duty cicle
-      duty_cicle = 60000/(frec_res*8);
       
       //Lectura de la presión
       set_adc_channel(0);
@@ -59,6 +55,7 @@ void main () {
       q_pres_med = read_adc();
       pres = (5.0*q_pres_med)/1024.0;
       pres_med = ((0.475 + pres)/0.045) - 1;
+      //pres_med = (100*q_pres_med)/bits100;
       
       //Visualización de los datos
       printf(lcd_putc, "\fFR = %.1f Res/m", frec_res);
@@ -68,10 +65,10 @@ void main () {
       //Verificar si se presiona el pulsador de Start
       if (input(PIN_B4)) {
          start_stop = 1;
-         delay_ms(50);
+         delay_ms(100);
       } else if (input(PIN_B5)) {
          start_stop = 0;
-         delay_ms(50);
+         delay_ms(100);
       }
       
       //Motor Paso A Paso
@@ -79,13 +76,8 @@ void main () {
          cont_motor = 0;
          while (cont_motor < 8) {
             output_b(motor[cont_motor]);
-            delay_ms(duty_cicle);
+            delay_ms(100);
             cont_motor++;
-            if (input(PIN_B5)) {
-               start_stop = 0;
-               delay_ms(50);
-               break;
-            }
          }
       } else {}
    }

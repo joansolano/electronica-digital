@@ -79,13 +79,8 @@ void main () {
          cont_motor = 0;
          while (cont_motor < 8) {
             output_b(motor[cont_motor]);
-            delay_ms(duty_cicle);
+            delay_ms(1);
             cont_motor++;
-            if (input(PIN_B5)) {
-               start_stop = 0;
-               delay_ms(50);
-               break;
-            }
          }
       } else {}
    }

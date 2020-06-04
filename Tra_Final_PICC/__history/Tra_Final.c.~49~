@@ -81,11 +81,7 @@ void main () {
             output_b(motor[cont_motor]);
             delay_ms(duty_cicle);
             cont_motor++;
-            if (input(PIN_B5)) {
-               start_stop = 0;
-               delay_ms(50);
-               break;
-            }
+            if (input(PIN_B5)) break;
          }
       } else {}
    }

@@ -1,5 +1,5 @@
 ÀÄTra_Final
-   ÀÄMAIN  0/391  Ram=24
+   ÀÄMAIN  0/455  Ram=25
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄlcd_init  0/62  Ram=6
       ³  ÃÄ@delay_ms1  0/21  Ram=1
@@ -32,7 +32,16 @@
       ³     ÀÄ*
       ÃÄ@delay_ms1  0/21  Ram=1
       ÃÄ@ITOF  0/29  Ram=2
+      ÃÄmap  0/133  Ram=24
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@DIVFF  0/202  Ram=14
+      ³  ÀÄ@ADDFF  0/321  Ram=16
       ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@DIVFF  0/202  Ram=14
+      ÃÄ@SFTOI  0/33  Ram=4
       ÃÄ@ITOF  0/29  Ram=2
       ÃÄ@MULFF  0/117  Ram=13
       ÃÄ@DIVFF  0/202  Ram=14
@@ -69,4 +78,5 @@
       ÃÄ@delay_ms1  0/21  Ram=1
       ÃÄ@delay_ms1  0/21  Ram=1
       ÃÄ@const685  0/12  Ram=0
+      ÃÄ@delay_ms1  0/21  Ram=1
       ÀÄ@delay_ms1  0/21  Ram=1

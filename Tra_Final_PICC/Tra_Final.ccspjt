@@ -11,7 +11,7 @@ Type=4
 1=Tra_Final.c
 
 [defines]
-buildcount=28
+buildcount=36
 
 [ProjectLog]
 Days=2
@@ -59,7 +59,7 @@ D1_L35=[79225]Started Editing.
 D1_L36=[79628]Stopped Editing.
 D1_L37=[79976]Project Closed.
 D2=03-06-2020
-D2_L=19
+D2_L=22
 D2_L1=[4462]Project Opened.
 D2_L2=[4486]Project Closed.
 D2_L3=[66609]Project Opened.
@@ -81,13 +81,16 @@ D2_L16=[80859]Started Editing.
 D2_L17=[81700]Stopped Editing.
 D2_L18=[82206]Started Editing.
 D2_L19=[82965]Stopped Editing.
+D2_L20=[85307]Started Editing.
+D2_L21=[85607]Stopped Editing.
+D2_L22=[85963]Started Editing.
 
 [fileformats]
 forcecoff=0
 
 [Opened Files]
 1=Tra_Final.c
-t1=16
+t1=70
 2=..\Lab_Final_PICC\Lab_Final.c
 t2=1
 Count=1
