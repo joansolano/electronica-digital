@@ -17,12 +17,11 @@ void main () {
    //Variables
    //Frecuencia respiratoria (10-70) Respiraciones por minuto
    float frec_res = 0;
-   float q_frec_res = 0;
+   int16 q_frec_res = 0;
    //Presion medida
-   float pres = 0;
    float pres_med = 0;
-   float q_pres_med = 0;
-   //float bits100 = 836.9605145;    //El sensor MPX4115 entrega 4.092V a 100kPa
+   int16 q_pres_med = 0;
+   float bits100 = 837.2;    //El sensor MPX4115 entrega 4.092V a 100kPa
    
    //Puertos Motor Paso a Paso y Start-Stop
    set_tris_b(0xF0);             //Se usan los puertos de RB0 hasta RB3
@@ -50,13 +49,11 @@ void main () {
       set_adc_channel(0);
       delay_us(20);
       q_pres_med = read_adc();
-      pres = (5.0*q_pres_med)/1024.0;
-      pres_med = ((0.475 + pres)/0.045) - 1;
-      //pres_med = (100*q_pres_med)/bits100;
+      pres_med = (100*q_pres_med)/bits100;
       
       //Visualización de los datos
-      printf(lcd_putc, "\fFr.R = %.1f Res/Min", q_frec_res);
-      printf(lcd_putc, "\nPr. = %.0f kPa", pres_med);
+      printf(lcd_putc, "\fFr.R = %.1f Res/Min", frec_res);
+      printf(lcd_putc, "\nPr. = %.1f kPa", q_pres_med);
       delay_ms(20);
       
       //Verificar si se presiona el pulsador de Start

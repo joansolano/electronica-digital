@@ -1,5 +1,5 @@
 ÀÄTra_Final
-   ÀÄMAIN  0/291  Ram=16
+   ÀÄMAIN  0/391  Ram=24
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄlcd_init  0/62  Ram=6
       ³  ÃÄ@delay_ms1  0/21  Ram=1
@@ -33,9 +33,12 @@
       ÃÄ@delay_ms1  0/21  Ram=1
       ÃÄ@ITOF  0/29  Ram=2
       ÃÄ@MULFF  0/117  Ram=13
-      ÃÄ@MUL1616  0/23  Ram=5
-      ÃÄ@DIV1616  0/39  Ram=5
       ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@DIVFF  0/202  Ram=14
+      ÃÄ@ADDFF  0/321  Ram=16
+      ÃÄ@DIVFF  0/202  Ram=14
+      ÃÄ@ADDFF  0/321  Ram=16
       ÃÄ@PSTRINGCN7_670  0/87  Ram=5
       ³  ÃÄlcd_putc  0/44  Ram=1
       ³  ³  ÀÄ*

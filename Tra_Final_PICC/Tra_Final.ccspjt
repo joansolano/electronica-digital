@@ -11,14 +11,14 @@ Type=4
 1=Tra_Final.c
 
 [defines]
-buildcount=10
+buildcount=28
 
 [ProjectLog]
-Days=1
+Days=2
 D1=02-06-2020
 D1_L=37
 D1_L1=[4095]Stopped Editing.
-TotalEdit=12
+TotalEdit=22
 TotalDebug=0
 D1_E=12
 D1_D=0
@@ -58,16 +58,39 @@ D1_L34=[74615]Stopped Editing.
 D1_L35=[79225]Started Editing.
 D1_L36=[79628]Stopped Editing.
 D1_L37=[79976]Project Closed.
+D2=03-06-2020
+D2_L=19
+D2_L1=[4462]Project Opened.
+D2_L2=[4486]Project Closed.
+D2_L3=[66609]Project Opened.
+D2_L4=[66632]Started Editing.
+D2_L5=[66958]Stopped Editing.
+D2_L6=[73329]Started Editing.
+D2_L7=[73631]Stopped Editing.
+D2_L8=[73872]Started Editing.
+D2_L9=[74688]Stopped Editing.
+D2_E=10
+D2_D=0
+D2_L10=[74754]Project Closed.
+D2_L11=[78837]Project Opened.
+D2_L12=[79012]Started Editing.
+D2_L13=[79542]Stopped Editing.
+D2_L14=[80471]Started Editing.
+D2_L15=[80859]Stopped Editing.
+D2_L16=[80859]Started Editing.
+D2_L17=[81700]Stopped Editing.
+D2_L18=[82206]Started Editing.
+D2_L19=[82965]Stopped Editing.
 
 [fileformats]
 forcecoff=0
 
 [Opened Files]
 1=Tra_Final.c
-t1=1
-2=..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c
-t2=319
-Count=2
+t1=16
+2=..\Lab_Final_PICC\Lab_Final.c
+t2=1
+Count=1
 3=..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c
 t3=53
 [Units]

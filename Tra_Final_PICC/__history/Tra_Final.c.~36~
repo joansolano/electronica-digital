@@ -17,7 +17,7 @@ void main () {
    //Variables
    //Frecuencia respiratoria (10-70) Respiraciones por minuto
    float frec_res = 0;
-   float q_frec_res = 0;
+   int16 q_frec_res = 0;
    //Presion medida
    float pres = 0;
    float pres_med = 0;
@@ -51,12 +51,12 @@ void main () {
       delay_us(20);
       q_pres_med = read_adc();
       pres = (5.0*q_pres_med)/1024.0;
-      pres_med = ((0.475 + pres)/0.045) - 1;
+      pre_med = (0.475 + pres)/0.045;
       //pres_med = (100*q_pres_med)/bits100;
       
       //Visualización de los datos
-      printf(lcd_putc, "\fFr.R = %.1f Res/Min", q_frec_res);
-      printf(lcd_putc, "\nPr. = %.0f kPa", pres_med);
+      printf(lcd_putc, "\fFr.R = %.1f Res/Min", frec_res);
+      printf(lcd_putc, "\nPr. = %.0f kPa", q_pres_med);
       delay_ms(20);
       
       //Verificar si se presiona el pulsador de Start
