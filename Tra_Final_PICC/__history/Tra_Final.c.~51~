@@ -26,7 +26,7 @@ void main () {
    float q_pres_med = 0;
    
    //Duty cicle
-   int per_res = 0;
+   int duty_cicle = 0;
    
    //Puertos Motor Paso a Paso y Start-Stop
    set_tris_b(0xF0);             //Se usan los puertos de RB0 hasta RB3

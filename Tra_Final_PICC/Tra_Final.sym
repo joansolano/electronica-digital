@@ -16,7 +16,7 @@
 02C-02F MAIN.pres
 030-033 MAIN.pres_med
 034-037 MAIN.q_pres_med
-038     MAIN.duty_cicle
+038     MAIN.per_res
 039-03A @ITOF.P1
 039-03C map.valor
 039     @PSTRINGCN7_670.P1
@@ -145,11 +145,11 @@ Project Directory:
     D:\1JOAN\Universidad\Electronica_Digital\Electronica_Digital\Tra_Final_PICC\
 
 Project Files:
-    Tra_Final.c                                             [04-jun.-20 00:15  CRC=2307F64C]
+    Tra_Final.c                                             [04-jun.-20 20:56  CRC=2397110E]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-ene.-18 15:53  CRC=9C71CB72]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c   [22-feb.-16 09:05  CRC=D1A6378A]
 
-Source signature=62C630D2
+Source signature=63554B94
 Program memory checksum=0000
 Program memory CRC=0000
 Hex file CRC=482E
