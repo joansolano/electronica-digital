@@ -85,13 +85,15 @@ D2_L20=[85307]Started Editing.
 D2_L21=[85607]Stopped Editing.
 D2_L22=[85963]Started Editing.
 D3=04-06-2020
-D3_L=4
+D3_L=6
 D3_L1=[1197]Stopped Editing.
 D3_E=45
 D3_D=0
 D3_L2=[1402]Project Closed.
 D3_L3=[75338]Project Opened.
 D3_L4=[75356]Started Editing.
+D3_L5=[75706]Stopped Editing.
+D3_L6=[75744]Started Editing.
 
 [fileformats]
 forcecoff=0

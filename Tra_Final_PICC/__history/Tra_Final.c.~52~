@@ -25,7 +25,7 @@ void main () {
    float pres_med = 0;
    float q_pres_med = 0;
    
-   //Periodo de respiración
+   //Duty cicle
    int per_res = 0;
    
    //Puertos Motor Paso a Paso y Start-Stop
