@@ -145,11 +145,11 @@ Project Directory:
     D:\1JOAN\Universidad\Electronica_Digital\Electronica_Digital\Tra_Final_PICC\
 
 Project Files:
-    Tra_Final.c                                             [04-jun.-20 20:56  CRC=2397110E]
+    Tra_Final.c                                             [04-jun.-20 21:27  CRC=94BD4E06]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f887.h [15-ene.-18 15:53  CRC=9C71CB72]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.c   [22-feb.-16 09:05  CRC=D1A6378A]
 
-Source signature=63554B94
+Source signature=D47B888C
 Program memory checksum=0000
 Program memory CRC=0000
 Hex file CRC=482E

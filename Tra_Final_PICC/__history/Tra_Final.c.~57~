@@ -1,0 +1,96 @@
+#include <16f887.h>
+#device ADC = 10
+#use delay(clock=4000000, crystal)
+#fuses XT, NOWDT, NOPROTECT
+#include <LCD.c>
+
+#use fast_io(A)
+#use fast_io(B)
+#use fast_io(C)
+#use fast_io(D)
+
+int1 start_stop = 0;
+int8 cont_motor = 0;
+const byte motor[8] = {0b1000, 0b1100, 0b0100, 0b0110, 0b0010, 0b0011, 0b0001, 0b1001};
+
+double map (float valor, float entradaMin, float entradaMax, float salidaMin, float salidaMax);
+
+void main () {
+   //Variables
+   //Frecuencia respiratoria (10-70) Respiraciones por minuto
+   float frec_res = 0;
+   float q_frec_res = 0;
+   //Presion medida
+   float pres = 0;
+   float pres_med = 0;
+   float q_pres_med = 0;
+   
+   //Periodo de respiración
+   int per_res = 0;
+   
+   //Puertos Motor Paso a Paso y Start-Stop
+   set_tris_b(0xF0);             //Se usan los puertos de RB0 hasta RB3
+                                 //para el motor paso a paso y los puertos
+                                 //RB4 y RB5 para Start y Stop, respectivamente
+   
+   //Configuración ADC
+   setup_adc_ports(0x03);        //Se usan los canales AN0 y AN1
+   setup_adc(ADC_CLOCK_INTERNAL);
+   
+   //Configuración LCD
+   lcd_init();
+   delay_ms(300);
+   printf(lcd_putc, "\fBienvenido!!!");
+   delay_ms(300);
+   
+   while (true) {
+      //Lectura de la frecuencia respiratoria
+      set_adc_channel(1);
+      delay_us(20);
+      q_frec_res = read_adc();
+      frec_res = map(q_frec_res, 0, 1023, 10, 70);
+      
+      //Duty cicle
+      per_res = 60000/(frec_res*8);
+      
+      //Lectura de la presión
+      set_adc_channel(0);
+      delay_us(20);
+      q_pres_med = read_adc();
+      pres = (5.0*q_pres_med)/1024.0;
+      pres_med = ((0.475 + pres)/0.045) - 1;
+      
+      //Visualización de los datos
+      printf(lcd_putc, "\fFR = %.1f Res/m", frec_res);
+      printf(lcd_putc, "\nPr. = %.0f kPa", pres_med);
+      delay_ms(20);
+      
+      //Verificar si se presiona el pulsador de Start
+      if (input(PIN_B4)) {
+         start_stop = 1;
+         delay_ms(50);
+      } else if (input(PIN_B5)) {
+         start_stop = 0;
+         delay_ms(50);
+      }
+      
+      //Motor Paso A Paso
+      if (start_stop) {
+         cont_motor = 0;
+         while (cont_motor < 4) {
+            output_b(motor[cont_motor]);
+            delay_ms(per_res);
+            cont_motor++;
+            if (input(PIN_B5)) {
+               start_stop = 0;
+               delay_ms(50);
+               break;
+            }
+         }
+      } else {}
+   }
+}
+
+double map (float valor, float entradaMin, float entradaMax, float salidaMin, float salidaMax) {
+   return ((((valor-entradaMin)*(salidaMax-salidaMin))/(entradaMax-entradaMin))+salidaMin); 
+}

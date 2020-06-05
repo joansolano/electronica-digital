@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.076, 56587               04-jun.-20 20:56
+CCS PCM C Compiler, Version 5.076, 56587               04-jun.-20 21:27
 
                Filename:   D:\1JOAN\Universidad\Electronica_Digital\Electronica_Digital\Tra_Final_PICC\Tra_Final.lst
 
@@ -2009,7 +2009,7 @@ CCS PCM C Compiler, Version 5.076, 56587               04-jun.-20 20:56
 ....................    float pres_med = 0; 
 ....................    float q_pres_med = 0; 
 ....................     
-....................    //Duty cicle 
+....................    //Periodo de respiración 
 ....................    int per_res = 0; 
 ....................     
 ....................    //Puertos Motor Paso a Paso y Start-Stop 
